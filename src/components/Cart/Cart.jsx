@@ -1,4 +1,4 @@
-import { HStack } from '@chakra-ui/react';
+import { VStack } from '@chakra-ui/react';
 
 import Modal from './Modal/Modal'
 
@@ -6,9 +6,9 @@ const Cart = ()=> {
 
     return (
         <Modal>
-            <HStack>
-                
-            </HStack>
+            <VStack>
+
+            </VStack>
         </Modal>
     )
 }
