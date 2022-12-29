@@ -1,17 +1,15 @@
-import { HStack } from "@chakra-ui/react"
+import { HStack } from '@chakra-ui/react';
 
-import ShoppingCartLottie from "../components/LottieAnimation/ShoppingCartLottie";
+import ShoppingCartLottie from '../components/LottieAnimation/ShoppingCartLottie';
+import ProductLists from '../components/ProductsList/ProductsList';
 
-const Home = ()=> {
-
-    return (
-        <HStack
-        w="100%"
-        h="100vh"
-        bg="#FFFFF0">
-            <ShoppingCartLottie/>
-        </HStack>
-    )
-}
+const Home = () => {
+  return (
+    <HStack w="100%" h="100vh" bg="#FFFFF0">
+      <ProductLists/>
+      <ShoppingCartLottie />
+    </HStack>
+  );
+};
 
 export default Home;
