@@ -7,7 +7,7 @@ const Cart = ()=> {
     return (
         <Modal>
             <VStack>
-
+                
             </VStack>
         </Modal>
     )
