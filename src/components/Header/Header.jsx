@@ -11,8 +11,7 @@ const Header = () => {
       alignItems="center"
       h={40}
       p={15}
-      justifyContent="flex-end"
-    >
+      justifyContent="flex-end">
       <Button
         w={100}
         h={40}
