@@ -1,20 +1,19 @@
-import { VStack, Box } from "@chakra-ui/react";
+import { VStack } from '@chakra-ui/react';
 
-import style from './ProductsList.module.css'
+import style from './ProductsList.module.css';
 
-const ProductLists = ()=> {
+import Product from './Product/Product';
 
-    return (
-        <VStack
-        w="50%"
-        h="100vh"
-        className={style.gradient}>
-
-        </VStack>
-
-
-    )
-}
-
+const ProductLists = () => {
+  return (
+    <VStack
+      w="35%"
+      h="80vh"
+      borderRadius={10}
+      className={style.gradient}>
+      <Product/>
+    </VStack>
+  );
+};
 
 export default ProductLists;
