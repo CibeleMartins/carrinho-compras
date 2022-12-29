@@ -12,13 +12,12 @@ const ProductLists = () => {
 
     <VStack
       w="35%"
-      h="80vh"
+      h="100%"
       borderRadius={10}
       padding={20}
       className={style.gradient}
       alignItems="center"
-      marginLeft={80}
-      marginBottom={100}>
+      marginLeft={80}>
       {listProducts.map((i)=> {
         return <Product nameProduct={i.name} productPrice={i.price}/>
       })}
