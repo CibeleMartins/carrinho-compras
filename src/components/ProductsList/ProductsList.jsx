@@ -20,7 +20,7 @@ const ProductLists = () => {
       marginLeft={80}>
       {listProducts.map((i)=> {
         
-        return <Product nameProduct={i} productPrice="30"/>
+        return <Product nameProduct={i.name} productPrice={i.price}/>
       })}
 
 
