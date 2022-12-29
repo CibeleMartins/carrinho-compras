@@ -4,7 +4,10 @@ import style from './ProductsList.module.css';
 
 import Product from './Product/Product';
 
+import { listProducts } from '../../data/products';
+
 const ProductLists = () => {
+
   return (
 
     <VStack
@@ -15,7 +18,12 @@ const ProductLists = () => {
       className={style.gradient}
       alignItems="center"
       marginLeft={80}>
-      <Product/>
+      {listProducts.map((i)=> {
+        
+        return <Product nameProduct={i} productPrice="30"/>
+      })}
+
+
     </VStack>
   
   );

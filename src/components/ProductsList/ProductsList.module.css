@@ -2,6 +2,7 @@
   background: linear-gradient(45deg, #7928CA, #FF0080, #FFD700, #FFFFF0);
   background-size: 300% 300%;
   animation: colors 15s ease infinite;
+  
 }
 
 @keyframes colors {
