@@ -17,7 +17,8 @@ const ProductLists = () => {
       padding={20}
       className={style.gradient}
       alignItems="center"
-      marginLeft={80}>
+      marginLeft={80}
+      marginBottom={100}>
       {listProducts.map((i)=> {
         return <Product nameProduct={i.name} productPrice={i.price}/>
       })}

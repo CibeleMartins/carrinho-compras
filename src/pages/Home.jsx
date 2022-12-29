@@ -5,7 +5,7 @@ import ProductLists from '../components/ProductsList/ProductsList';
 
 const Home = () => {
   return (
-    <HStack w="100%" h="100vh" bg="#FFFFF0" alignItems="center" spacing="10%">
+    <HStack w="100%" h="100vh" bg="#FFFFF0" spacing="10%">
       <ProductLists/>
       <ShoppingCartLottie />
     </HStack>

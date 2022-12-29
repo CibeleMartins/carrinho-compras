@@ -1,4 +1,4 @@
-import { Button, HStack, Text, VStack, Input } from '@chakra-ui/react';
+import { Button, HStack, Text, Input } from '@chakra-ui/react';
 
 const Product = ({ nameProduct, productPrice }) => {
   return (
