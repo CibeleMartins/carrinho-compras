@@ -1,4 +1,4 @@
-import { Box, VStack } from '@chakra-ui/react';
+import { VStack } from '@chakra-ui/react';
 
 import style from './ProductsList.module.css';
 
@@ -19,7 +19,6 @@ const ProductLists = () => {
       alignItems="center"
       marginLeft={80}>
       {listProducts.map((i)=> {
-        
         return <Product nameProduct={i.name} productPrice={i.price}/>
       })}
 

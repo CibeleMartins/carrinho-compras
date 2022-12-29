@@ -13,30 +13,32 @@ const Product = ({ nameProduct, productPrice }) => {
       justifyContent="space-between"
     >
       <HStack w={400} justifyContent="space-between">
-        <Text>{nameProduct}</Text>
-        <Text>{productPrice}</Text>
+        <Text letterSpacing={2} >{nameProduct}</Text>
+        <Text fontSize={15} >{productPrice}</Text>
       </HStack>
 
       <HStack justifyContent="flex-end" w={300}>
-        <Input 
-        min={0} 
-        max={10} 
-        w="25%" 
-        p={6} 
-        h={10} 
-        type="number"
-        border="1px solid #FF0080"
-        borderRadius={10}
-        outline="none" />
+        <Input
+          min={0}
+          max={10}
+          w="25%"
+          p={6}
+          h={10}
+          type="number"
+          border="1px solid #FF0080"
+          borderRadius={10}
+          outline="none"
+        />
         <Button
-         boxShadow="0 2px 8px rgba(0, 0, 0, 0.25)"
+          boxShadow="0 2px 8px rgba(0, 0, 0, 0.25)"
           w="30%"
           h={25}
           outline="none"
           border="none"
           bg="#FF0080"
           color="#FFFFF0"
-          borderRadius={10}>
+          borderRadius={10}
+        >
           Add
         </Button>
       </HStack>
