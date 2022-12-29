@@ -2,6 +2,9 @@ import React from 'react';
 import Lottie from 'react-lottie';
 import * as lottieJson from './83548-online-shopping-black-friday.json';
 
+import style from './ShoppingCartLottie.module.css'
+
+
 const ShoppingCartLottie = () => {
   const defaultOptions = {
     loop: true,
@@ -13,9 +16,9 @@ const ShoppingCartLottie = () => {
   };
 
   return (
-    <>
-      <Lottie options={defaultOptions} height={400} width={500} />
-    </>
+    <div className={style.lottie}>
+      <Lottie options={defaultOptions}/>
+    </div>
   );
 };
 
