@@ -1,4 +1,4 @@
-import { VStack } from '@chakra-ui/react';
+import { VStack, HStack, Text } from '@chakra-ui/react';
 
 import Modal from './Modal/Modal';
 
@@ -11,8 +11,11 @@ const Cart = ({ productsAdded }) => {
     <Modal>
       <VStack>
         {productsAdded.map((p)=> {
-            return <CartItem productName={p.productName} productAmount={p.productAmount} productPrice={p.productPrice} />
+            return <CartItem productName={p.productName} productAmount={p.productAmount} productPrice={p.productPrice} priceForAmount={p.totalPriceForAmount} />
         })}
+        <HStack>
+          <Text></Text>
+        </HStack>
       </VStack>
     </Modal>
   );

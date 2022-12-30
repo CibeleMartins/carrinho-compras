@@ -9,14 +9,27 @@ const Home = ({ modalIsClosed }) => {
   const [arrayProductsForCart, setArray] = useState([]);
 
   const getProductForCart = (name, price, amount) => {
-    
+
     const products = [];
 
-    products.push({
-      productName: name,
-      productPrice: price,
-      productAmount: amount + ' x',
-    });
+   let priceRemoveSymbol = price.replace("R$ ", "").replace(",", ".")
+
+    const amountNumber = parseInt(amount)
+    const priceNumber = parseFloat(priceRemoveSymbol)
+
+
+
+    console.log(amountNumber, priceRemoveSymbol, priceNumber)
+
+    if (parseInt(amount) > 0) {
+
+      products.push({
+        productName: name,
+        productPrice: price,
+        productAmount: amount + ' x',
+        totalPriceForAmount: parseFloat(amount).toFixed(2) * parseFloat(price.replace('R$', '')).toFixed(2)
+      });
+    }
 
     setArray(prevState => [...prevState, ...products]);
   };

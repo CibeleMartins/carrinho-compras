@@ -1,6 +1,6 @@
 import { HStack, Text } from '@chakra-ui/react';
 
-const CartItem = ({ productName, productAmount, productPrice }) => {
+const CartItem = ({ productName, productAmount, productPrice, priceForAmount }) => {
   return (
     <HStack
       h="10vh"
@@ -15,6 +15,7 @@ const CartItem = ({ productName, productAmount, productPrice }) => {
       <Text w={100} letterSpacing={2}>{productName}</Text>
       <Text w={50}>{productAmount}</Text>
       <Text w={90} fontSize={15}>{productPrice}</Text>
+      <Text w={90} fontSize={15}>{priceForAmount}</Text>
     </HStack>
   );
 };
