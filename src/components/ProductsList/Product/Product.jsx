@@ -1,6 +1,10 @@
 import { Button, HStack, Text, Input } from '@chakra-ui/react';
 
-const Product = ({ nameProduct, productPrice }) => {
+import { useRef } from 'react';
+
+const Product = ({ nameProduct, productPrice, sendProductForCart }) => {
+
+  const refInput = useRef();
   return (
     <HStack
       h="10vh"
@@ -19,6 +23,7 @@ const Product = ({ nameProduct, productPrice }) => {
 
       <HStack justifyContent="flex-end" w={300}>
         <Input
+          ref={refInput}
           min={0}
           max={10}
           w="25%"
@@ -30,6 +35,7 @@ const Product = ({ nameProduct, productPrice }) => {
           outline="none"
         />
         <Button
+          onClick={()=> sendProductForCart(nameProduct, productPrice, refInput.current.value)}
           boxShadow="0 2px 8px rgba(0, 0, 0, 0.25)"
           w="30%"
           h={25}

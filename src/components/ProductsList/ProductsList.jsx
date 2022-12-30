@@ -6,7 +6,12 @@ import Product from './Product/Product';
 
 import { listProducts } from '../../data/products';
 
-const ProductLists = () => {
+const ProductLists = ({getProductAdded}) => {
+
+  const getInformationsProductAdded = (name, price, amount) => {
+
+    getProductAdded(name, price, amount)
+  }
 
   return (
 
@@ -19,7 +24,7 @@ const ProductLists = () => {
       alignItems="center"
       marginLeft={80}>
       {listProducts.map((i)=> {
-        return <Product nameProduct={i.name} productPrice={i.price}/>
+        return <Product sendProductForCart={getInformationsProductAdded} nameProduct={i.name} productPrice={i.price}/>
       })}
 
 

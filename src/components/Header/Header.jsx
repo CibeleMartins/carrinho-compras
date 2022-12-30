@@ -3,15 +3,13 @@ import { HStack, Button, Text } from '@chakra-ui/react';
 import cartIcon from '../../assets/cartIcon.svg';
 import styles from './Header.module.css';
 
-import useClose from '../../hook/useClose';
 import { useState } from 'react';
 
-const Header = ({getDisplay}) => {
+const Header = ({ getDisplay }) => {
+  const [displayModal, setDisplayModal] = useState(false);
 
-  const [displayModal, setDisplayModal] = useState(false)
-
-  getDisplay(displayModal)
-  console.log(displayModal)
+  getDisplay(displayModal);
+  console.log(displayModal);
 
   return (
     <HStack
@@ -19,9 +17,12 @@ const Header = ({getDisplay}) => {
       alignItems="center"
       h={40}
       p={15}
-      justifyContent="flex-end">
+      justifyContent="flex-end"
+    >
       <Button
-      onClick={()=> displayModal ? setDisplayModal(false) : setDisplayModal(true)}
+        onClick={() =>
+          displayModal ? setDisplayModal(false) : setDisplayModal(true)
+        }
         w={100}
         h={40}
         border="none"
@@ -30,7 +31,9 @@ const Header = ({getDisplay}) => {
         borderRadius={10}
       >
         <img className={styles.cartIcon} alt="carrinho" src={cartIcon} />
-        <Text fontSize={20} color="#FFFFF0">0</Text>
+        <Text fontSize={20} color="#FFFFF0">
+          0
+        </Text>
       </Button>
     </HStack>
   );
