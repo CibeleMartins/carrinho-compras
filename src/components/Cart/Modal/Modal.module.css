@@ -11,12 +11,13 @@
   .modal {
     position: fixed;
     top: 10vh;
+    height: 60vh;
     left: 5%;
     width: 90%;
     background: linear-gradient(45deg, #7928CA, #FF0080, #FFD700, #FFFFF0);
     background-size: 300% 300%;
-    animation: colors 15s ease infinite;
-    padding: 1rem;
+    /* animation: colors 15s ease infinite; */
+    padding: 1.5rem;
     border-radius: 14px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     z-index: 30;
