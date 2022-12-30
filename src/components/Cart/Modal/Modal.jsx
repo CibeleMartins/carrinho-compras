@@ -23,7 +23,7 @@ const ModalOverlay = props => {
 
 const portalElement = document.getElementById('overlays');
 
-const Modal = props => {
+const CartModal = props => {
   return (
     <>
       {ReactDOM.createPortal(
@@ -34,4 +34,4 @@ const Modal = props => {
   );
 };
 
-export default Modal;
+export default CartModal;

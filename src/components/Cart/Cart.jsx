@@ -22,6 +22,9 @@ const Cart = ({ productsAdded, total }) => {
         <Text fontSize={20} color="#FFFFF0" letterSpacing={2}>Cart</Text>
       </HStack>
       <VStack
+      overflow={"scroll"}
+      h="300px"
+      overflowY="auto"
       pt="8%">
         {productsAdded.map(p => {
           return (
