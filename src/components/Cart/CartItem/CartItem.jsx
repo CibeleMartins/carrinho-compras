@@ -2,6 +2,7 @@ import { HStack, Text } from '@chakra-ui/react';
 
 
 const CartItem = ({ productName, productAmount, productPrice }) => {
+  
   return (
     <HStack>
       <Text>{productName}</Text>

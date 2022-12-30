@@ -6,16 +6,19 @@ import Cart from '../components/Cart/Cart';
 import { useState } from 'react';
 
 const Home = ({ modalIsClosed }) => {
-
-  const [arrayProductsForCart, setArray] = useState([])
+  const [arrayProductsForCart, setArray] = useState([]);
 
   const getProductForCart = (name, price, amount) => {
+    
+    const products = [];
 
-    const products =[]
+    products.push({
+      productName: name,
+      productPrice: price,
+      productAmount: amount + ' x',
+    });
 
-    products.push({productName: name, productPrice: price, productamount: amount})
-
-    setArray(prevState=> [...prevState, ...products])
+    setArray(prevState => [...prevState, ...products]);
   };
 
   return (
