@@ -14,8 +14,7 @@ const Cart = ({ productsAdded, total }) => {
       <HStack
         w="100%"
         position="fixed"
-        left={20}
-        bottom="400px"
+        left="5%"
         h={50}
         justifyContent="flex-start"
         alignItems="flex-end"
@@ -23,7 +22,7 @@ const Cart = ({ productsAdded, total }) => {
         <Text fontSize={20} color="#FFFFF0" letterSpacing={2}>Cart</Text>
       </HStack>
       <VStack
-      p={20}>
+      pt="8%">
         {productsAdded.map(p => {
           return (
             <CartItem
@@ -40,7 +39,7 @@ const Cart = ({ productsAdded, total }) => {
         w="100%"
         position="fixed"
         right={20}
-        top="400px"
+        top="90%"
         h={50}
         justifyContent="flex-end"
         alignItems="flex-end"
