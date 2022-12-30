@@ -16,10 +16,7 @@ const Home = ({ modalIsClosed }) => {
 
     const amountNumber = parseInt(amount)
     const priceNumber = parseFloat(priceRemoveSymbol)
-
-
-
-    console.log(amountNumber, priceRemoveSymbol, priceNumber)
+    const priceProductForAmount = amountNumber * priceNumber
 
     if (parseInt(amount) > 0) {
 
@@ -27,7 +24,7 @@ const Home = ({ modalIsClosed }) => {
         productName: name,
         productPrice: price,
         productAmount: amount + ' x',
-        totalPriceForAmount: parseFloat(amount).toFixed(2) * parseFloat(price.replace('R$', '')).toFixed(2)
+        totalPriceForAmount: 'R$ ' + priceProductForAmount.toString().replace('.', ',')
       });
     }
 
