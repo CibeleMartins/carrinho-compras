@@ -12,6 +12,8 @@ const Cart = ({ productsAdded, total }) => {
       ? total.reduce((actual, acumulator) => actual + acumulator)
       : 0;
 
+  console.log(priceTotal)
+
   return (
     <Modal>
       <HStack
@@ -66,7 +68,7 @@ const Cart = ({ productsAdded, total }) => {
         alignItems="flex-end"
       >
         <Text fontSize={20} color="#FFFFF0" letterSpacing={2}>
-          Total {'R$' + priceTotal}{' '}
+          Total {'R$' + parseFloat(priceTotal).toFixed(2)}{' '}
         </Text>
       </HStack>
     </Modal>
