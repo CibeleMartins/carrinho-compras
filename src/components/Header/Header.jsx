@@ -3,17 +3,12 @@ import { HStack, Button, Text } from '@chakra-ui/react';
 import cartIcon from '../../assets/cartIcon.svg';
 import styles from './Header.module.css';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const Header = ({ getDisplay }) => {
   const [displayModal, setDisplayModal] = useState(false);
 
   setTimeout(() => getDisplay(displayModal), 0);
-  // console.log(displayModal);
-  // getDisplay(displayModal)
-  // useEffect(() => {
-  //  getDisplay(displayModal)
-  // });
 
   return (
     <HStack

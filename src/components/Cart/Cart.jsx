@@ -5,12 +5,23 @@ import Modal from './Modal/Modal';
 import CartItem from './CartItem/CartItem';
 
 const Cart = ({ productsAdded, total }) => {
-  console.log(productsAdded, total);
+  // console.log(productsAdded, total);
 
-  const priceTotal = total.length > 0 ? total.reduce((actual, acumulator) => actual + acumulator) : console.log("aray vazio");
+  const priceTotal = total.length > 0 ? total.reduce((actual, acumulator) => actual + acumulator) : 0;
 
   return (
     <Modal>
+      <HStack
+        w="100%"
+        position="fixed"
+        left={20}
+        bottom="400px"
+        h={50}
+        justifyContent="flex-start"
+        alignItems="flex-end"
+      >
+        <Text fontSize={20} color="#FFFFF0" letterSpacing={2}>Cart</Text>
+      </HStack>
       <VStack>
         {productsAdded.map(p => {
           return (
@@ -33,7 +44,7 @@ const Cart = ({ productsAdded, total }) => {
         justifyContent="flex-end"
         alignItems="flex-end"
       >
-        <Text letterSpacing={2}>Total {'R$' + priceTotal} </Text>
+        <Text fontSize={20} color="#FFFFF0"  letterSpacing={2}>Total {'R$' + priceTotal} </Text>
       </HStack>
     </Modal>
   );
