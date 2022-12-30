@@ -3,9 +3,16 @@ import { HStack, Button, Text } from '@chakra-ui/react';
 import cartIcon from '../../assets/cartIcon.svg';
 import styles from './Header.module.css';
 
+import useClose from '../../hook/useClose';
+import { useState } from 'react';
 
-const Header = () => {
- 
+const Header = ({getDisplay}) => {
+
+  const [displayModal, setDisplayModal] = useState(false)
+
+  getDisplay(displayModal)
+  console.log(displayModal)
+
   return (
     <HStack
       bg="transparent"
@@ -14,6 +21,7 @@ const Header = () => {
       p={15}
       justifyContent="flex-end">
       <Button
+      onClick={()=> displayModal ? setDisplayModal(false) : setDisplayModal(true)}
         w={100}
         h={40}
         border="none"

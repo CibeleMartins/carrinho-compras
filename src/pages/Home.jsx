@@ -4,11 +4,13 @@ import ShoppingCartLottie from '../components/LottieAnimation/ShoppingCartLottie
 import ProductLists from '../components/ProductsList/ProductsList';
 import Cart from '../components/Cart/Cart';
 
-const Home = () => {
+import useClose from '../hook/useClose';
 
+const Home = ({modalIsClosed}) => {
+console.log(modalIsClosed)
   return (
     <HStack w="100%" h="100vh" bg="#FFFFF0" spacing="10%">
-      <Cart/>
+    {modalIsClosed ? <Cart/> : console.log('fechado')}
       <ProductLists/>
       <ShoppingCartLottie />
     </HStack>
