@@ -35,7 +35,7 @@ const Home = ({ modalIsClosed }) => {
   };
 
   return (
-    <HStack w="100%" h="100vh" bg="#FFFFF0" spacing="10%">
+    <HStack w="100%" h="100%" bg="#FFFFF0" alignItems="center" spacing="10%">
       {modalIsClosed ? (
         <Cart productsAdded={arrayProductsForCart} total={totalPrice} />
       ) : null}

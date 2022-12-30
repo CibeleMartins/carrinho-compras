@@ -15,7 +15,7 @@ const Header = ({ getDisplay }) => {
       bg="transparent"
       alignItems="center"
       h={40}
-      p={15}
+      p={30}
       justifyContent="flex-end"
     >
       <Button
