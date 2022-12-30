@@ -8,7 +8,7 @@ import { useState } from 'react';
 const Header = ({ getDisplay }) => {
   const [displayModal, setDisplayModal] = useState(false);
 
-  getDisplay(displayModal);
+  setTimeout(() => getDisplay(displayModal), 0);
   console.log(displayModal);
 
   return (
