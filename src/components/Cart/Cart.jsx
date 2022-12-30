@@ -7,13 +7,20 @@ import CartItem from './CartItem/CartItem';
 const Cart = ({ productsAdded, total }) => {
   console.log(productsAdded, total);
 
-  const priceTotal = total.reduce((actual, acumulator)=> actual + acumulator)
+  const priceTotal = total.length > 0 ? total.reduce((actual, acumulator) => actual + acumulator) : console.log("aray vazio");
 
   return (
     <Modal>
       <VStack>
-        {productsAdded.map((p)=> {
-            return <CartItem productName={p.productName} productAmount={p.productAmount} productPrice={p.productPrice} priceForAmount={p.totalPriceForAmount} />
+        {productsAdded.map(p => {
+          return (
+            <CartItem
+              productName={p.productName}
+              productAmount={p.productAmount}
+              productPrice={p.productPrice}
+              priceForAmount={p.totalPriceForAmount}
+            />
+          );
         })}
       </VStack>
 
@@ -24,9 +31,10 @@ const Cart = ({ productsAdded, total }) => {
         top="400px"
         h={50}
         justifyContent="flex-end"
-        alignItems="flex-end">
-          <Text letterSpacing={2}>Total {'R$' + priceTotal} </Text>
-        </HStack>
+        alignItems="flex-end"
+      >
+        <Text letterSpacing={2}>Total {'R$' + priceTotal} </Text>
+      </HStack>
     </Modal>
   );
 };

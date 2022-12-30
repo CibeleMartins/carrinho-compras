@@ -8,7 +8,7 @@ for (var i = 0; i <= 10; i++) {
     const price = faker.finance.amount(0,100,2,'R$ ', true)
  
     if (!listProducts.includes(product)){
-        listProducts.push({name: product, price: price})
+        listProducts.push({id: Math.random(parseInt()), name: product, price: price})
     }
 }
 

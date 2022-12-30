@@ -24,7 +24,7 @@ const ProductLists = ({getProductAdded}) => {
       alignItems="center"
       marginLeft={80}>
       {listProducts.map((i)=> {
-        return <Product sendProductForCart={getInformationsProductAdded} nameProduct={i.name} productPrice={i.price}/>
+        return <Product key={i.id} sendProductForCart={getInformationsProductAdded} nameProduct={i.name} productPrice={i.price}/>
       })}
 
 
