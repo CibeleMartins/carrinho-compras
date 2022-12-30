@@ -10,10 +10,11 @@ const CartItem = ({ productName, productAmount, productPrice }) => {
       pr="5%"
       borderRadius={10}
       boxShadow="0 2px 8px rgba(0, 0, 0, 0.25)"
+      justifyContent="space-between"
     >
-      <Text>{productName}</Text>
-      <Text>{productAmount}</Text>
-      <Text>{productPrice}</Text>
+      <Text w={100} letterSpacing={2}>{productName}</Text>
+      <Text w={50}>{productAmount}</Text>
+      <Text w={90} fontSize={15}>{productPrice}</Text>
     </HStack>
   );
 };

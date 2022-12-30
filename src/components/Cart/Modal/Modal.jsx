@@ -4,14 +4,17 @@ import ReactDOM from 'react-dom';
 import { useState } from 'react';
 
 const ModalOverlay = props => {
-
-  const [isClose, setIsClose] = useState(false)
+  const [isClose, setIsClose] = useState(false);
   return (
-    <div className={isClose ?  classes.closeModal : classes.backdrop} onClick={()=> setIsClose(true)}>
-      <div className={classes.modal}>
+    <>
+      <div
+        className={isClose ? classes.closeModal : classes.backdrop}
+        onClick={() => setIsClose(true)}
+      ></div>
+      <div className={isClose ? classes.closeModal : classes.modal}>
         <div className={classes.content}>{props.children}</div>
       </div>
-    </div>
+    </>
   );
 };
 
