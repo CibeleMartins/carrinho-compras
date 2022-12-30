@@ -7,7 +7,10 @@ import CartItem from './CartItem/CartItem';
 const Cart = ({ productsAdded, total }) => {
   // console.log(productsAdded, total);
 
-  const priceTotal = total.length > 0 ? total.reduce((actual, acumulator) => actual + acumulator) : 0;
+  const priceTotal =
+    total.length > 0
+      ? total.reduce((actual, acumulator) => actual + acumulator)
+      : 0;
 
   return (
     <Modal>
@@ -19,13 +22,28 @@ const Cart = ({ productsAdded, total }) => {
         justifyContent="flex-start"
         alignItems="flex-end"
       >
-        <Text fontSize={20} color="#FFFFF0" letterSpacing={2}>Cart</Text>
+        <Text fontSize={20} color="#FFFFF0" letterSpacing={2}>
+          Cart
+        </Text>
       </HStack>
       <VStack
-      overflow={"scroll"}
-      h="300px"
-      overflowY="auto"
-      pt="8%">
+        css={{
+          '&::-webkit-scrollbar': {
+            width: '4px',
+          },
+          '&::-webkit-scrollbar-track': {
+            width: '6px',
+          },
+          '&::-webkit-scrollbar-thumb': {
+            backgroundColor: '#FFFFF0',
+            borderRadius: '10px',
+          },
+        }}
+        borderRadius={10}
+        overflowY={'scroll'}
+        h="40vh"
+        p="8%"
+      >
         {productsAdded.map(p => {
           return (
             <CartItem
@@ -47,7 +65,9 @@ const Cart = ({ productsAdded, total }) => {
         justifyContent="flex-end"
         alignItems="flex-end"
       >
-        <Text fontSize={20} color="#FFFFF0"  letterSpacing={2}>Total {'R$' + priceTotal} </Text>
+        <Text fontSize={20} color="#FFFFF0" letterSpacing={2}>
+          Total {'R$' + priceTotal}{' '}
+        </Text>
       </HStack>
     </Modal>
   );
