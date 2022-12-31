@@ -10,7 +10,6 @@ const Home = ({ modalIsClosed }) => {
   const [totalPrice, setTotalPrice] = useState([]);
 
   const getProductForCart = (name, price, amount) => {
-
     const products = [];
     const totalPriceAllProducts = [];
 
@@ -26,26 +25,42 @@ const Home = ({ modalIsClosed }) => {
       productAmount: amount + ' x',
       totalPriceForAmount:
         'R$ ' + priceProductForAmount.toFixed(2).toString().replace('.', ','),
+    };
+
+    arrayProductsForCart.reduce((acumulo, atual)=> {
+      
+    })
+    const produtoRepetido = arrayProductsForCart.find(elem => elem.productName === productObject.productName)
+
+    if (produtoRepetido) {
+
+      const amountNewProductNumber = parseInt(productObject.productAmount.replace(" x", ""))
+      const amountRepetidoProductNumber = parseInt(produtoRepetido.productAmount.replace(" x", ""))
+
+      const newAmount = amountNewProductNumber + amountRepetidoProductNumber
+
+      productObject.productAmount = newAmount
+
+      const indexRepetido = arrayProductsForCart.indexOf(produtoRepetido)
+
+      console.log(indexRepetido)
+
+      arrayProductsForCart.splice(indexRepetido, 1)
     }
 
-    console.log(productObject)
+      
+   
 
+   
     if (parseInt(amount) > 0) {
-        
       totalPriceAllProducts.push(priceProductForAmount);
 
-      products.push(productObject)
+      products.push(productObject);
     }
 
-
-
-
-    
     setArray(prevState => [...prevState, ...products]);
 
-
-
-    console.log(products)
+    // console.log(products)
     setTotalPrice(prevState => [...prevState, ...totalPriceAllProducts]);
   };
 

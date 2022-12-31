@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { VStack, HStack, Text } from '@chakra-ui/react';
 
 import Modal from './Modal/Modal';
@@ -12,17 +13,31 @@ const Cart = ({ productsAdded, total }) => {
       ? total.reduce((actual, acumulator) => actual + acumulator)
       : 0;
 
-  // percorrer produtos adicionados
-  // filtrar os produtos com nome igual
-  // p/ cada produto com o nome igual some a quantidade de cada um que for igual
-  // imprima o nome e a quantidade total
   const newListProducts = productsAdded.reduce((soma, cur) => {
-    // guarda o nome atual e verifica se existe repetido
+  
     let nameProduct = cur.productName;
 
-    let repetido = soma.find(elem => elem.productName == nameProduct)
+    let repetido = soma.find(elem => elem.productName === nameProduct)
 
-    if (repetido) repetido.productAmount += cur.productAmount;
+    if (repetido){
+      
+      const amountRepetidoNumber = parseInt(repetido.productAmount.replace(" x", ""))
+      const amountCurrentNumber = parseInt(cur.productAmount.replace(" x", ""))
+       
+      const sumAmount = amountRepetidoNumber + amountCurrentNumber
+
+      cur.productAmount = sumAmount + " x"
+
+      soma.push(cur)
+
+      let index_item_repetido = soma.indexOf(repetido)
+
+      soma.splice(index_item_repetido, 1)
+
+      //  console.log(cur.productAmount)
+      //  console.log(index_item_repetido)
+      //  console.log(arraySemRepetido)
+    }
     else soma.push(cur);
 
     return soma;
@@ -65,9 +80,10 @@ const Cart = ({ productsAdded, total }) => {
         h="40vh"
         p="8%"
       >
-        {productsAdded.map(p => {
+        {newListProducts.map(p => {
           return (
             <CartItem
+            key={p.id}
               productName={p.productName}
               productAmount={p.productAmount}
               productPrice={p.productPrice}

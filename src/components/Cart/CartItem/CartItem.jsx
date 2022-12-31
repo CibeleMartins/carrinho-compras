@@ -1,3 +1,5 @@
+import { memo  } from 'react';
+
 import { HStack, VStack, Text } from '@chakra-ui/react';
 
 const CartItem = ({ productName, productAmount, productPrice, priceForAmount }) => {
@@ -29,4 +31,4 @@ const CartItem = ({ productName, productAmount, productPrice, priceForAmount }) 
   );
 };
 
-export default CartItem;
+export default memo(CartItem);
