@@ -12,7 +12,26 @@ const Cart = ({ productsAdded, total }) => {
       ? total.reduce((actual, acumulator) => actual + acumulator)
       : 0;
 
-  console.log(priceTotal)
+  // percorrer produtos adicionados
+  // filtrar os produtos com nome igual
+  // p/ cada produto com o nome igual some a quantidade de cada um que for igual
+  // imprima o nome e a quantidade total
+  const newListProducts = productsAdded.reduce((soma, cur) => {
+    // guarda o nome atual e verifica se existe repetido
+    let nameProduct = cur.productName;
+
+    let repetido = soma.find(elem => elem.productName == nameProduct)
+
+    if (repetido) repetido.productAmount += cur.productAmount;
+    else soma.push(cur);
+
+    return soma;
+  }, []);
+
+  console.log(newListProducts)
+  
+
+  // console.log(priceTotal)
 
   return (
     <Modal>

@@ -10,6 +10,7 @@ const Home = ({ modalIsClosed }) => {
   const [totalPrice, setTotalPrice] = useState([]);
 
   const getProductForCart = (name, price, amount) => {
+
     const products = [];
     const totalPriceAllProducts = [];
 
@@ -19,18 +20,32 @@ const Home = ({ modalIsClosed }) => {
     const priceNumber = parseFloat(priceRemoveSymbol);
     const priceProductForAmount = amountNumber * priceNumber;
 
-    if (parseInt(amount) > 0) {
-      totalPriceAllProducts.push(priceProductForAmount);
-      products.push({
-        productName: name,
-        productPrice: price,
-        productAmount: amount + ' x',
-        totalPriceForAmount:
-          'R$ ' + priceProductForAmount.toFixed(2).toString().replace('.', ','),
-      });
+    const productObject = {
+      productName: name,
+      productPrice: price,
+      productAmount: amount + ' x',
+      totalPriceForAmount:
+        'R$ ' + priceProductForAmount.toFixed(2).toString().replace('.', ','),
     }
 
+    console.log(productObject)
+
+    if (parseInt(amount) > 0) {
+        
+      totalPriceAllProducts.push(priceProductForAmount);
+
+      products.push(productObject)
+    }
+
+
+
+
+    
     setArray(prevState => [...prevState, ...products]);
+
+
+
+    console.log(products)
     setTotalPrice(prevState => [...prevState, ...totalPriceAllProducts]);
   };
 
