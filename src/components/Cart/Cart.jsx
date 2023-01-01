@@ -13,41 +13,6 @@ const Cart = ({ productsAdded, total }) => {
       ? total.reduce((actual, acumulator) => actual + acumulator)
       : 0;
 
-  // const newListProducts = productsAdded.reduce((soma, cur) => {
-  
-  //   let nameProduct = cur.productName;
-
-  //   let repetido = soma.find(elem => elem.productName === nameProduct)
-
-  //   if (repetido){
-      
-  //     const amountRepetidoNumber = parseInt(repetido.productAmount.replace(" x", ""))
-  //     const amountCurrentNumber = parseInt(cur.productAmount.replace(" x", ""))
-       
-  //     const sumAmount = amountRepetidoNumber + amountCurrentNumber
-
-  //     cur.productAmount = sumAmount + " x"
-
-  //     soma.push(cur)
-
-  //     let index_item_repetido = soma.indexOf(repetido)
-
-  //     soma.splice(index_item_repetido, 1)
-
-  //     //  console.log(cur.productAmount)
-  //     //  console.log(index_item_repetido)
-  //     //  console.log(arraySemRepetido)
-  //   }
-  //   else soma.push(cur);
-
-  //   return soma;
-  // }, []);
-
-  // console.log(newListProducts)
-  
-
-  // console.log(priceTotal)
-
   return (
     <Modal>
       <HStack

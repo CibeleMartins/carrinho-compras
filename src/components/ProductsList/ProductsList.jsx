@@ -19,7 +19,7 @@ const ProductLists = ({ getProductAdded }) => {
       padding={20}
       className={style.gradient}
       alignItems="center"
-      marginLeft={80}
+      marginLeft="5%"
     >
       <VStack
       overflowY={"scroll"}
