@@ -27,35 +27,18 @@ const Home = ({ modalIsClosed }) => {
         'R$ ' + priceProductForAmount.toFixed(2).toString().replace('.', ','),
     };
 
-    arrayProductsForCart.reduce((acumulo, atual)=> {
-      
-    })
-    const produtoRepetido = arrayProductsForCart.find(elem => elem.productName === productObject.productName)
+    let copyStateArrayProducts = [...arrayProductsForCart]
+    console.log(copyStateArrayProducts)
+    let produtoRepetido = copyStateArrayProducts.find(elem => elem.productName === productObject.productName)  
+    console.log(produtoRepetido)
 
-    if (produtoRepetido) {
-
-      const amountNewProductNumber = parseInt(productObject.productAmount.replace(" x", ""))
-      const amountRepetidoProductNumber = parseInt(produtoRepetido.productAmount.replace(" x", ""))
-
-      const newAmount = amountNewProductNumber + amountRepetidoProductNumber
-
-      productObject.productAmount = newAmount
-
-      const indexRepetido = arrayProductsForCart.indexOf(produtoRepetido)
-
-      console.log(indexRepetido)
-
-      arrayProductsForCart.splice(indexRepetido, 1)
-    }
-
-      
-   
-
-   
-    if (parseInt(amount) > 0) {
+    if (parseInt(amount) > 0 && !produtoRepetido) {
       totalPriceAllProducts.push(priceProductForAmount);
 
       products.push(productObject);
+    } else {
+
+      produtoRepetido.productAmount = parseInt(produtoRepetido.productAmount.replace(' x', '') ) + parseInt(productObject.productAmount.replace(' x', '')) + ' x'
     }
 
     setArray(prevState => [...prevState, ...products]);
