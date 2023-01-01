@@ -41,7 +41,7 @@ const Home = ({ modalIsClosed }) => {
       produtoRepetido.productAmount = parseInt(produtoRepetido.productAmount.replace(' x', '') ) + parseInt(productObject.productAmount.replace(' x', '')) + ' x'
     }
 
-    setArray(prevState => [...prevState, ...products]);
+    setArray(prevState =>[...prevState, ...products])
 
     // console.log(products)
     setTotalPrice(prevState => [...prevState, ...totalPriceAllProducts]);
