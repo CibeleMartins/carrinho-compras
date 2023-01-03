@@ -8,7 +8,7 @@ const Product = ({ nameProduct, productPrice, sendProductForCart }) => {
   return (
     <HStack
       h="10vh"
-      w="80%"
+      w="100%"
       bg="white"
       pl="5%"
       pr="5%"

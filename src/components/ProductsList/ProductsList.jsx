@@ -6,20 +6,21 @@ import Product from './Product/Product';
 
 import { listProducts } from '../../data/products';
 
-const ProductLists = ({ getProductAdded }) => {
+const ProductLists = ({ getProductAdded, breakpoint }) => {
   const getInformationsProductAdded = (name, price, amount) => {
     getProductAdded(name, price, amount);
   };
 
   return (
     <VStack
-      w="35%"
+      w={breakpoint !== '100' ? '35%' : '80%'}
       h="70vh"
       borderRadius={10}
-      padding={20}
+      padding="25px"
       className={style.gradient}
       alignItems="center"
-      marginLeft="5%"
+      marginLeft={breakpoint !== '100' ? '5%' : '0%'}
+      mt={breakpoint !== '100' ? '0%' : '5%'}
     >
       <VStack
       overflowY={"scroll"}

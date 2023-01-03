@@ -52,7 +52,7 @@ const Home = ({ modalIsClosed, breakpointHeader }) => {
       {modalIsClosed ? (
         <Cart productsAdded={arrayProductsForCart} total={totalPrice} />
       ) : null}
-      <ProductLists getProductAdded={getProductForCart} />
+      <ProductLists breakpoint={breakpointHeader} getProductAdded={getProductForCart} />
       <ShoppingCartLottie receiveHeaderBreakpoint={breakpointHeader}/>
     </HStack>
   );
