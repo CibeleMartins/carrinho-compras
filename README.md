@@ -17,7 +17,6 @@
        <br />
     <br />
     <h1 align="center">
-    <img src="./src/assets/images/gitHub.png" alt="Logo" width="250">
  </h1>
   </p>
 </p>
