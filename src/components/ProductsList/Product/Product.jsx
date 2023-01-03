@@ -19,10 +19,10 @@ const Product = ({ nameProduct, productPrice, sendProductForCart }) => {
     >
       <HStack w="55%" justifyContent="space-between">
         <Text letterSpacing={2} >{nameProduct}</Text>
-        <Text fontSize={15} >{productPrice}</Text>
+        <Text  fontSize={15}>{productPrice}</Text>
       </HStack>
 
-      <HStack justifyContent="flex-end" w="45%" h={100}>
+      <HStack justifyContent="flex-end" w="45%">
         <Input
           ref={refInput}
           min="0"

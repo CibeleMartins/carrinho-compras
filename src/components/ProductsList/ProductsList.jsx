@@ -26,6 +26,7 @@ const ProductLists = ({ getProductAdded, breakpoint }) => {
       overflowY={"scroll"}
       w="100%"
       h="65vh"
+      p="4%"
       css={{
         '&::-webkit-scrollbar': {
           width: '4px',
