@@ -19,7 +19,7 @@ const Cart = ({ productsAdded, total }) => {
         w="100%"
         position="fixed"
         left="5%"
-        h={50}
+        h="30px"
         justifyContent="flex-start"
         alignItems="flex-end"
       >
@@ -42,7 +42,7 @@ const Cart = ({ productsAdded, total }) => {
         }}
         borderRadius={10}
         overflowY={'scroll'}
-        h="40vh"
+        h="50vh"
         p="8%"
       >
         {productsAdded.map(p => {
@@ -61,9 +61,9 @@ const Cart = ({ productsAdded, total }) => {
       <HStack
         w="100%"
         position="fixed"
-        right={20}
+        right="15px"
         top="90%"
-        h={50}
+        h="30px"
         justifyContent="flex-end"
         alignItems="flex-end"
       >
