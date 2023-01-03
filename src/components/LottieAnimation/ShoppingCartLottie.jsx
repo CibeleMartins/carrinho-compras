@@ -10,7 +10,7 @@ import style from './ShoppingCartLottie.module.css';
 
 import { useState } from 'react';
 
-const ShoppingCartLottie = ({ receiveHeaderBreakpoint }) => {
+const ShoppingCartLottie = ({ receiveHeaderBreakpoint, width, height }) => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -24,7 +24,7 @@ const ShoppingCartLottie = ({ receiveHeaderBreakpoint }) => {
     return null;
   } else {
     return (
-      <Box className={style.lottie}>
+      <Box w={width} h={height} className={style.lottie}>
         <Lottie options={defaultOptions} />
       </Box>
     );

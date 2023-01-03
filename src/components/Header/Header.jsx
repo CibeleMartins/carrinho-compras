@@ -29,13 +29,13 @@ const Header = ({ getDisplay, getBreakpoint }) => {
     <HStack
       bg="transparent"
       alignItems="center"
-      h="45px"
+      h="65px"
       p="35px"
       w={breakpoint}
-      justifyContent="flex-end"
+      justifyContent={breakpoint !== '100' ? 'flex-end' : 'space-between'}
     >
 
-      {breakpoint === '100' ? <ShoppingCartLottie/> : null}
+      {breakpoint === '100' ? <ShoppingCartLottie width={20} height={58}/> : null}
 
       <Button
         onClick={() =>
