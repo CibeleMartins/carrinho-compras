@@ -5,7 +5,7 @@ import ProductLists from '../components/ProductsList/ProductsList';
 import Cart from '../components/Cart/Cart';
 import { useState } from 'react';
 
-const Home = ({ modalIsClosed }) => {
+const Home = ({ modalIsClosed, breakpointHeader }) => {
   const [arrayProductsForCart, setArray] = useState([]);
   const [totalPrice, setTotalPrice] = useState([]);
 
@@ -53,7 +53,7 @@ const Home = ({ modalIsClosed }) => {
         <Cart productsAdded={arrayProductsForCart} total={totalPrice} />
       ) : null}
       <ProductLists getProductAdded={getProductForCart} />
-      <ShoppingCartLottie />
+      <ShoppingCartLottie receiveHeaderBreakpoint={breakpointHeader}/>
     </HStack>
   );
 };

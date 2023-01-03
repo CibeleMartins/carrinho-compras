@@ -3,10 +3,25 @@ import { HStack, Button, Text } from '@chakra-ui/react';
 import cartIcon from '../../assets/cartIcon.svg';
 import styles from './Header.module.css';
 
-import { useState } from 'react';
+import ShoppingCartLottie from '../LottieAnimation/ShoppingCartLottie';
 
-const Header = ({ getDisplay }) => {
+import { useState} from 'react';
+import { useBreakpointValue } from '@chakra-ui/react'
+
+const Header = ({ getDisplay, getBreakpoint }) => {
+
   const [displayModal, setDisplayModal] = useState(false);
+  const [showLogoLottie, setLogoLottie] =useState(false)
+
+  const breakpoint = useBreakpointValue({
+    sm: '100',
+    md: '100',
+    lg: '100%',
+    xl: '100%',
+    '2xl': '100%',
+  })
+
+  setTimeout(()=> getBreakpoint(breakpoint))
 
   setTimeout(() => getDisplay(displayModal), 0);
 
@@ -14,16 +29,20 @@ const Header = ({ getDisplay }) => {
     <HStack
       bg="transparent"
       alignItems="center"
-      h={40}
-      p={30}
+      h="45px"
+      p="35px"
+      w={breakpoint}
       justifyContent="flex-end"
     >
+
+      {breakpoint === '100' ? <ShoppingCartLottie/> : null}
+
       <Button
         onClick={() =>
           displayModal ? setDisplayModal(false) : setDisplayModal(true)
         }
         w={100}
-        h={40}
+        h="40px"
         border="none"
         boxShadow="0 2px 8px rgba(0, 0, 0, 0.25)"
         bg="#FF0080"
