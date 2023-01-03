@@ -27,7 +27,7 @@ const Header = ({ getDisplay, getBreakpoint }) => {
 
   return (
     <HStack
-      bg="transparent"
+      bg="#FFFFF0"
       alignItems="center"
       h="65px"
       p="35px"
