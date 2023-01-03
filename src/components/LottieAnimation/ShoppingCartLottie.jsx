@@ -2,13 +2,9 @@ import React from 'react';
 import Lottie from 'react-lottie';
 import * as lottieJson from './83548-online-shopping-black-friday.json';
 
-import { useBreakpoint } from '@chakra-ui/react';
-
 import { Box } from '@chakra-ui/react';
 
 import style from './ShoppingCartLottie.module.css';
-
-import { useState } from 'react';
 
 const ShoppingCartLottie = ({ receiveHeaderBreakpoint, width, height }) => {
   const defaultOptions = {

@@ -11,7 +11,6 @@ import { useBreakpointValue } from '@chakra-ui/react'
 const Header = ({ getDisplay, getBreakpoint }) => {
 
   const [displayModal, setDisplayModal] = useState(false);
-  const [showLogoLottie, setLogoLottie] =useState(false)
 
   const breakpoint = useBreakpointValue({
     sm: '100',
@@ -31,6 +30,7 @@ const Header = ({ getDisplay, getBreakpoint }) => {
       alignItems="center"
       h="65px"
       p="35px"
+      pt="45px"
       w={breakpoint}
       justifyContent={breakpoint !== '100' ? 'flex-end' : 'space-between'}
     >

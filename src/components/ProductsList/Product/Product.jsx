@@ -18,8 +18,8 @@ const Product = ({ nameProduct, productPrice, sendProductForCart }) => {
       justifyContent="space-between"
     >
       <HStack w="55%" justifyContent="space-between">
-        <Text letterSpacing={2} >{nameProduct}</Text>
-        <Text  fontSize={15}>{productPrice}</Text>
+        <Text whiteSpace="nowrap" letterSpacing={2} >{nameProduct}</Text>
+        <Text whiteSpace="nowrap"  fontSize={15}>{productPrice}</Text>
       </HStack>
 
       <HStack justifyContent="flex-end" w="45%">
@@ -38,12 +38,13 @@ const Product = ({ nameProduct, productPrice, sendProductForCart }) => {
           onClick={()=> sendProductForCart(nameProduct, productPrice, refInput.current.value)}
           boxShadow="0 2px 8px rgba(0, 0, 0, 0.25)"
           w="30%"
-          h="30px"
+          h="40px"
           outline="none"
           border="none"
           bg="#FF0080"
           color="#FFFFF0"
           borderRadius={10}
+          variant="solid"
         >
           Add
         </Button>
