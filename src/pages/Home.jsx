@@ -48,7 +48,7 @@ const Home = ({ modalIsClosed, breakpointHeader }) => {
   };
 
   return (
-    <HStack w="100%" h="100%" bg="#FFFFF0" alignItems="center" spacing="10%">
+    <HStack w="100%" h="100%" bg="#FFFFF0" alignItems="center" justifyContent={breakpointHeader === '100' ? 'center' : null} spacing="10%">
       {modalIsClosed ? (
         <Cart productsAdded={arrayProductsForCart} total={totalPrice} />
       ) : null}
