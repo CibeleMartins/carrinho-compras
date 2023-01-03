@@ -12,22 +12,22 @@ const Product = ({ nameProduct, productPrice, sendProductForCart }) => {
       bg="white"
       pl="5%"
       pr="5%"
+      p={5}
       borderRadius={10}
       boxShadow="0 2px 8px rgba(0, 0, 0, 0.25)"
       justifyContent="space-between"
     >
-      <HStack w={400} justifyContent="space-between">
+      <HStack w="55%" justifyContent="space-between">
         <Text letterSpacing={2} >{nameProduct}</Text>
         <Text fontSize={15} >{productPrice}</Text>
       </HStack>
 
-      <HStack justifyContent="flex-end" w={300}>
+      <HStack justifyContent="flex-end" w="45%" h={100}>
         <Input
           ref={refInput}
-          min={0}
-          max={10}
-          w="25%"
-          p={6}
+          min="0"
+          max="10"
+          w="35%"
           h={10}
           type="number"
           border="1px solid #FF0080"
@@ -38,7 +38,7 @@ const Product = ({ nameProduct, productPrice, sendProductForCart }) => {
           onClick={()=> sendProductForCart(nameProduct, productPrice, refInput.current.value)}
           boxShadow="0 2px 8px rgba(0, 0, 0, 0.25)"
           w="30%"
-          h={25}
+          h="30px"
           outline="none"
           border="none"
           bg="#FF0080"
