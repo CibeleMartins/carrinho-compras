@@ -13,6 +13,7 @@ const Header = ({ getDisplay, getBreakpoint }) => {
   const [displayModal, setDisplayModal] = useState(false);
 
   const breakpoint = useBreakpointValue({
+    base:'100',
     sm: '100',
     md: '100',
     lg: '100%',
