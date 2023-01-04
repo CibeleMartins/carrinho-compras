@@ -2,11 +2,12 @@ import React from 'react';
 import Lottie from 'react-lottie';
 import * as lottieJson from './83548-online-shopping-black-friday.json';
 
-import { Box } from '@chakra-ui/react';
+import { Box} from '@chakra-ui/react';
 
 import style from './ShoppingCartLottie.module.css';
 
 const ShoppingCartLottie = ({ receiveHeaderBreakpoint, width, height }) => {
+
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -16,7 +17,7 @@ const ShoppingCartLottie = ({ receiveHeaderBreakpoint, width, height }) => {
     },
   };
 
-  if (receiveHeaderBreakpoint === '100') {
+  if (receiveHeaderBreakpoint === '100' | receiveHeaderBreakpoint < 100) {
     return null;
   } else {
     return (

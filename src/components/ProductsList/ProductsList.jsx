@@ -13,7 +13,7 @@ const ProductLists = ({ getProductAdded, breakpoint }) => {
 
   return (
     <VStack
-      w={breakpoint !== '100' ? '35%' : '80%'}
+      w={breakpoint === '100' ? '80%' : '35%'}
       h="70vh"
       borderRadius={10}
       padding="25px"

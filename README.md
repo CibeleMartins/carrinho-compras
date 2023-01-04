@@ -23,12 +23,10 @@
 
 Este projeto foi iniciado com [Create React App](https://github.com/facebook/create-react-app).
 
-
 ## Sobre
 
 Este projeto foi desenvolvido como proposta de atividade do estágio e programação. A ideia foi desenvolver uma página em React
 na qual fosse possível adicionar produtos com base em uma quantidade em um carrinho de compras.
-
 
 ## Conhecimentos Praticados
 
@@ -48,7 +46,6 @@ na qual fosse possível adicionar produtos com base em uma quantidade em um carr
 ## Desenvolvido por
 
 - [Cibele Martins](https://github.com/CibeleMartins)
-
 
 ## Observações
 
