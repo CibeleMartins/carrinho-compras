@@ -42,6 +42,7 @@ const Cart = ({ productsAdded, total }) => {
         }}
         borderRadius={10}
         overflowY={'scroll'}
+        w="100%"
         h="50vh"
         p="8%"
       >
