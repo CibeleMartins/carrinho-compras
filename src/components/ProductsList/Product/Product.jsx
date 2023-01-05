@@ -18,8 +18,8 @@ const Product = ({ nameProduct, productPrice, sendProductForCart }) => {
       justifyContent="space-between"
     >
       <HStack w="55%" justifyContent="space-between">
-        <Text  whiteSpace="nowrap" letterSpacing={2} fontSize={['65%', 15, 15, 15, 15,15]} >{nameProduct}</Text>
-        <Text whiteSpace="nowrap"  fontSize={['70%', 15, 15, 15, 15,15]}>{productPrice}</Text>
+        <Text  whiteSpace="nowrap" letterSpacing={2} fontSize={['65%', 15, 15, 20, 20,20]} >{nameProduct}</Text>
+        <Text whiteSpace="nowrap"  fontSize={['65%', 15, 15, 15, 18,18]}>{productPrice}</Text>
       </HStack>
 
       <HStack justifyContent="flex-end" w={"45%"}>
@@ -28,7 +28,7 @@ const Product = ({ nameProduct, productPrice, sendProductForCart }) => {
           min="0"
           max="10"
           w="35%"
-          h={10}
+          h={['25px', '30%', '30%', '30%', '30%','40px']}
           type="number"
           border="1px solid #FF0080"
           borderRadius={10}
@@ -38,13 +38,14 @@ const Product = ({ nameProduct, productPrice, sendProductForCart }) => {
           onClick={()=> sendProductForCart(nameProduct, productPrice, refInput.current.value)}
           boxShadow="0 2px 8px rgba(0, 0, 0, 0.25)"
           w="30%"
-          h="40px"
+          h={['25px',"40px", "40px", "40px", "40px", "40px"]}
           outline="none"
           border="none"
           bg="#FF0080"
           color="#FFFFF0"
           borderRadius={10}
           variant="solid"
+          fontSize={[10,15,15,15,15,15]}
         >
           Add
         </Button>
