@@ -25,8 +25,9 @@ const Product = ({ nameProduct, productPrice, sendProductForCart }) => {
       <HStack justifyContent="flex-end" w={"45%"}>
         <Input
           ref={refInput}
+          textAlign="center"
           fontSize={15}
-          p={0}
+          p={1}
           w="35%"
           h={['25px', '40px', '40px', '40px', '40px','40px']}
           type="number"
