@@ -18,11 +18,11 @@ const Product = ({ nameProduct, productPrice, sendProductForCart }) => {
       justifyContent="space-between"
     >
       <HStack w="55%" justifyContent="space-between">
-        <Text whiteSpace="nowrap" letterSpacing={2} >{nameProduct}</Text>
-        <Text whiteSpace="nowrap"  fontSize={15}>{productPrice}</Text>
+        <Text  whiteSpace="nowrap" letterSpacing={2} fontSize={['65%', 15, 15, 15, 15,15]} >{nameProduct}</Text>
+        <Text whiteSpace="nowrap"  fontSize={['70%', 15, 15, 15, 15,15]}>{productPrice}</Text>
       </HStack>
 
-      <HStack justifyContent="flex-end" w="45%">
+      <HStack justifyContent="flex-end" w={"45%"}>
         <Input
           ref={refInput}
           min="0"
