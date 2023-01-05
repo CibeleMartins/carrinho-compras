@@ -12,7 +12,7 @@ const Product = ({ nameProduct, productPrice, sendProductForCart }) => {
       bg="white"
       pl="5%"
       pr="5%"
-      p={5}
+      p={[3,5,5,5,5,5]}
       borderRadius={10}
       boxShadow="0 2px 8px rgba(0, 0, 0, 0.25)"
       justifyContent="space-between"
@@ -25,10 +25,10 @@ const Product = ({ nameProduct, productPrice, sendProductForCart }) => {
       <HStack justifyContent="flex-end" w={"45%"}>
         <Input
           ref={refInput}
-          min="0"
-          max="10"
+          fontSize={15}
+          p={0}
           w="35%"
-          h={['25px', '30%', '30%', '30%', '30%','40px']}
+          h={['25px', '40px', '40px', '40px', '40px','40px']}
           type="number"
           border="1px solid #FF0080"
           borderRadius={10}
